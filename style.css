@@ -73,6 +73,7 @@ body {
 
 .font-family-selector {
   width: 150px;
+  font-family: Arial;
 }
 
 .selector {
@@ -161,10 +162,10 @@ body {
 .sheet-tab-container {
   border: 1px solid lightgray;
   width: calc(100vw - 110px);
+  display: flex;
 }
 
 .sheet-tab {
-  border-bottom: 4px solid #107c41;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
@@ -175,8 +176,18 @@ body {
   border-right: 1px solid lightgray;
 }
 
+.sheet-tab.selected {
+  border-bottom: 4px solid #107c41;
+}
+
 .sheet-tab:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.sheet-tab.selected:hover {
   cursor: default;
+  background-color: #fff;
 }
 
 .column-name {
@@ -206,6 +217,8 @@ body {
   border-bottom: 1px solid lightgray;
   border-right: 1px solid lightgray;
   outline-color: #107c41;
+  font-size: 16px;
+  font-family: 'Noto Sans';
 }
 
 .input-cell.selected {
@@ -256,4 +269,20 @@ body {
 
 .input-cell.left-cell-selected {
   border-left: none;
+}
+
+.color-picker {
+  position: absolute;
+  width: 26px;
+  height: 12px;
+  border: none;
+  padding: 0;
+  top: 30px;
+  left: 9px;
+  cursor: pointer;
+}
+
+.icon-color-fill,
+.icon-color-text {
+  position: relative;
 }
